@@ -128,7 +128,7 @@ kcna_sent_plot <- ggplot(docvars(kcna_dfm),
 kcna_sent_plot
 # poisitve 
 kcna_sent_plot_p <- ggplot(docvars(kcna_dfm),
-                         aes(x = prop_positive + prop_negative,
+                         aes(x = prop_positive,
                              y = net_sentiment)) +
   geom_smooth() + 
   theme_minimal() 
@@ -199,7 +199,7 @@ ggplot(freqs, n = 3, aes(x = feature, y = frequency)) + ggtitle("Feature frequen
 
 top <- ggplot(freqs, aes(x = feature, y = frequency)) +
   ggtitle("Top tokens for Grey") + geom_point() 
-+ theme_minimal() + theme(axis.text.x = element_text(angle = 90, hjust = 1)
++ theme_minimal() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 top                                                                                                                                                  
 
@@ -207,6 +207,8 @@ top
 # Frequent words overview 
 head(kwic(corpus, "think", window = 4))
 head(kwic(corpus, "love", window = 4))
+head(kwic(corpus, "fucking", window = 4))
+head(kwic(corpus, "fiction", window = 4))
 
 # Trying something else 
 
