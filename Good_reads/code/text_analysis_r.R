@@ -61,9 +61,7 @@ toks <- quanteda::tokens(corpus_kcna, include_docvars = TRUE,
 toks <- tokens_tolower(toks) # lowercase tokens
 stop_list <- stopwords("english")
 toks <- tokens_remove(toks, stop_list)
-toks <- tokens_remove(toks, c("i", "s", "t", "like", "just", "want", "christian", 
-                              "ana", "read", "just", "one", "book", "know", "say", "get", 
-                              "can", "even", "more", "likes", "commentsLike Commen", "kenna", "ledger",
+toks <- tokens_remove(toks, c("can", "even", "more", "likes", "commentsLike Commen", "kenna", "ledger",
                               "feel", "scotty", "make", "time", "didnt", "show", "go", "didn"))
 print(toks[2])
 # i. Convert quanteda tokens object to list of tokens
