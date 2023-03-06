@@ -3,12 +3,11 @@ library(dplyr)        # Required to use the pipes %>% and some table manipulatio
 library(magrittr)     # Required to use the pipes %>%
 library(rvest)        # Required for read_html
 library(RSelenium)    # Required for webscraping with javascript
-library(wdman)
-install.packages("wdman")
-remove.packages("wdman") 
+
 install.packages("remotes") 
 library(remotes) 
 install_version("wdman", "0.2.6")
+library(wdman)
 library(tidyverse)
 
 url <- "https://www.goodreads.com/book/show/10818853-fifty-shades-of-grey?ac=1&from_search=true&qid=NwB2jLgoIB&rank=1"
@@ -20,6 +19,9 @@ library(RSelenium)
 
 remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "firefox")
 remDr$open()
+remDr$navigate(url)
+
+
 remDr$navigate("http://www.google.com/ncr") # test 
 remDr$getTitle() # test
 

@@ -1,5 +1,5 @@
 ########################################################
-#  Webscraping and Text Analysis with R: Part 2
+#  Webscraping and Text Analysis with R: Fifty Shades of Grey 
 ########################################################
 #Installing packages 
 install.packages("textcat")
@@ -98,8 +98,7 @@ kcna_dfm <- comp_tok %>%
 
 topfeatures(kcna_dfm)
 # sample of 10 negative words
-negative_grey <- sample(data_dictionary_LSD2015$negative, 10) # sample of 
-10 negative words
+negative_grey <- sample(data_dictionary_LSD2015$negative, 10) # sample of 10 negative words
 
 positive_grey <- sample(data_dictionary_LSD2015$positive, 10) # sample of 10 positive words
 
